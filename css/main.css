@@ -1,0 +1,223 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 1.2rem;
+  color: #5a596d;
+  background: white;
+}
+
+
+  h1{
+    font-weight: 300;
+    margin: .7rem 1rem;
+    color: white;
+  }
+
+h2{
+  font-weight: 300;
+  text-align: center;
+}
+
+legend{
+  display: none;
+}
+
+
+
+/*-------------- Header ------------------*/
+
+header {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  height: auto;
+  background-color: #2E7581;
+  }
+
+.rightside_header{
+  display: flex;
+  align-items: center;
+  margin: .7rem 0;
+  color: white;
+}
+
+.main_profile{
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.main_profile img{
+  height: 50px;
+  margin: 0 1rem;
+  border-radius: 50%;
+}
+
+.bell_icon{
+  display: flex;
+  align-items: center;
+  height: 75%;
+  width: auto;
+  border-right: solid 1px #4f53b8;
+}
+
+.bell_icon img{
+    height: 40px;
+}
+
+/*---------------Main Content----------*/
+
+/*----Navigation----------*/
+
+.nav{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  color: white;
+  background: #2A5F67;
+}
+
+nav li a{
+  display: flex;
+  align-items: center;
+}
+
+nav li img{
+  height: 40px;
+  margin: 1.6rem 0 1.3rem 0;
+}
+
+.active_menu{
+  border-bottom: solid .3rem #C0B76B;
+  border-radius: 5%;
+}
+
+/*----Dashboard and Search----------*/
+
+.search{
+  display: flex;
+  justify-content: center;
+  padding: 0.3rem;
+
+}
+
+.search fieldset {
+  width: 90%;
+  padding: 2px;
+  border: solid 2px #2E7581;
+  border-radius: 6px;
+}
+
+input{
+  width: 82%;
+  border-style: none;
+  height: 3.5rem;
+  padding: 1rem;
+}
+
+input:focus,
+fieldset:focus{
+  border-bottom: dashed 3px orange;
+  color: black;
+  background-color: white;
+}
+
+.search img{
+  height: 2rem;
+  padding-right: 1rem;
+  opacity: .3;
+}
+
+.search_wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*----alert----------*/
+
+.alert{
+  display: flex;
+  color: white;
+  justify-content: center;
+}
+
+.alert_text{
+width: 90%;
+padding: 1rem;
+background: #B42867;
+border-radius: 5px;
+}
+
+.close{
+  position: absolute  ;
+}
+
+
+
+
+/*----Media 7xxpx ----
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  height: 70px;
+  background-color: #2E7581;
+  }
+
+.rightside_header{
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.main_profile{
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.main_profile img{
+  height: 50px;
+  margin: 0 1rem;
+  border-radius: 50%;
+}
+
+.bell_icon{
+  display: flex;
+  align-items: center;
+  height: 75%;
+  width: auto;
+  border-right: solid 1px #4f53b8;
+}
+
+.bell_icon img{
+    height: 40px;
+}
+
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  flex-direction: row;
+  color: white;
+  background: #2A5F67;
+}
+
+nav li a{
+  margin: 0 2rem;
+  display: flex;
+  align-items: center;
+}
+
+nav li img{
+  height: 60px;
+}
