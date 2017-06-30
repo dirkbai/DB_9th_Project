@@ -27,6 +27,12 @@ legend{
   display: none;
 }
 
+button{
+  display: flex;
+  border-style: none;
+  background: none;
+}
+
 
 
 /*-------------- Header ------------------*/
@@ -73,6 +79,7 @@ header {
 
 /*---------------Main Content----------*/
 
+
 /*----Navigation----------*/
 
 .nav{
@@ -100,6 +107,12 @@ nav li img{
 
 /*----Dashboard and Search----------*/
 
+.Titel_area{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .search{
   display: flex;
   justify-content: center;
@@ -108,14 +121,14 @@ nav li img{
 }
 
 .search fieldset {
-  width: 90%;
+  width: 100%;
   padding: 2px;
   border: solid 2px #2E7581;
   border-radius: 6px;
 }
 
-input{
-  width: 82%;
+input[name="Search_bar"]{
+  flex-grow: 1;
   border-style: none;
   height: 3.5rem;
   padding: 1rem;
@@ -130,7 +143,6 @@ fieldset:focus{
 
 .search img{
   height: 2rem;
-  padding-right: 1rem;
   opacity: .3;
 }
 
@@ -140,25 +152,26 @@ fieldset:focus{
   align-items: center;
 }
 
+
 /*----alert----------*/
 
 .alert{
   display: flex;
-  color: white;
   justify-content: center;
+  width: 86%;
+  color: white;
+  background: #B42867;
+  border-radius: 5px;
 }
 
 .alert_text{
-width: 90%;
-padding: 1rem;
-background: #B42867;
-border-radius: 5px;
+  padding: 1rem;
+  margin: .3rem;
 }
 
-.close{
-  position: absolute  ;
+button[name="close_button"]{
+  margin: 1rem;
 }
-
 
 
 
