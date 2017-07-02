@@ -25,6 +25,7 @@ h2{
 
 h3{
   font-weight: 300;
+  text-align: center;
 }
 
 legend{
@@ -195,6 +196,7 @@ button[name="close_button"]{
 .traffic_chart_wrapper h3,
 .Daily_chart_wrapper h3,
 .mobile_users_chart_wrapper{
+  margin-top: 3rem;
   width: 100%;
   text-align: center;
 }
@@ -211,7 +213,7 @@ button[name="close_button"]{
   align-items: center;
   flex-wrap: wrap;
   width: 90%;
-  margin: 0 5%;
+  margin: 1rem 5%;
   padding: 0 1rem;
   background-color: #ddd;
   border-radius: 5px;
@@ -238,6 +240,7 @@ button[name="close_button"]{
 .SoMe_wrapper h3{
   font-weight: bold;
   margin: 1rem 20% 0 20%;
+  color: #2E7581;
 }
 
 .SoMe_wrapper p{
@@ -245,6 +248,18 @@ button[name="close_button"]{
   font-size: 3.5rem;
   margin: 0 0 0 10%;
 }
+
+.social_stats h3{
+  margin-top: 3rem;
+}
+
+/*-------New Members------*/
+
+
+
+
+
+
 /*----Media 7xxpx ----
 
 header {
