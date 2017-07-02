@@ -249,14 +249,31 @@ button[name="close_button"]{
   margin: 0 0 0 10%;
 }
 
-.social_stats h3{
+.social_stats_title{
   margin-top: 3rem;
 }
 
 /*-------New Members------*/
 
 
+.member{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 1rem 5%;
+}
 
+.member img{
+    height: 5rem;
+    width: 5rem;
+    margin-right: 2rem;
+    border-radius: 50%;
+}
+
+.member p{
+  margin: 1rem 0 0 0;
+}
 
 
 
