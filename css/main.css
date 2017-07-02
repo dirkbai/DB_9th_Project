@@ -207,11 +207,12 @@ button[name="close_button"]{
 
 .SoMe_wrapper{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
   width: 90%;
   margin: 0 5%;
-  padding: 1rem;
+  padding: 0 1rem;
   background-color: #ddd;
   border-radius: 5px;
 }
@@ -221,7 +222,6 @@ button[name="close_button"]{
   justify-content: center;
   height: 5rem;
   width: 5rem;
-  margin: 0 34%;
   border-radius: 50%;
   background-color: #2E7581;
 }
@@ -229,6 +229,10 @@ button[name="close_button"]{
 .SoMe_Icon_wrapper img{
   height: 1.7rem;
   align-self: center;
+}
+
+.SoMe_Text{
+  flex-grow: 1;
 }
 
 .SoMe_wrapper h3{
@@ -239,7 +243,7 @@ button[name="close_button"]{
 .SoMe_wrapper p{
   font-weight: 300;
   font-size: 3.5rem;
-  margin: 0 20%;
+  margin: 0 0 0 10%;
 }
 /*----Media 7xxpx ----
 
