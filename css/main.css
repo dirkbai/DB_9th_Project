@@ -23,6 +23,10 @@ h2{
   text-align: center;
 }
 
+h3{
+  font-weight: 300;
+}
+
 legend{
   display: none;
 }
@@ -33,7 +37,11 @@ button{
   background: none;
 }
 
-
+canvas {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
 
 /*-------------- Header ------------------*/
 
@@ -173,8 +181,66 @@ button[name="close_button"]{
   margin: 1rem;
 }
 
+/*-------chart------*/
 
+.traffic_chart_wrapper,
+.daily_chart_wrapper,
+.mobile_users_chart_wrapper
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
+.traffic_chart_wrapper h3,
+.Daily_chart_wrapper h3,
+.mobile_users_chart_wrapper{
+  width: 100%;
+  text-align: center;
+}
+
+.traffic_chart_wrapper button{
+  margin: 1rem .3rem;
+}
+
+/*-------Social Stats------*/
+
+.SoMe_wrapper{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 5%;
+  padding: 1rem;
+  background-color: #ddd;
+  border-radius: 5px;
+}
+
+.SoMe_Icon_wrapper{
+  display: flex;
+  justify-content: center;
+  height: 5rem;
+  width: 5rem;
+  margin: 0 34%;
+  border-radius: 50%;
+  background-color: #2E7581;
+}
+
+.SoMe_Icon_wrapper img{
+  height: 1.7rem;
+  align-self: center;
+}
+
+.SoMe_wrapper h3{
+  font-weight: bold;
+  margin: 1rem 20% 0 20%;
+}
+
+.SoMe_wrapper p{
+  font-weight: 300;
+  font-size: 3.5rem;
+  margin: 0 20%;
+}
 /*----Media 7xxpx ----
 
 header {

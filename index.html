@@ -55,13 +55,40 @@
           </button>
         </div>
       </div>
-
+      <div class="traffic_chart_wrapper">
+        <h3>Traffic</h3>
+        <button type="button" name="Hourly">Hourly</button>
+        <button type="button" name="Daily">Daily</button>
+        <button type="button" name="Weekly" class="active_menu">Weekly</button>
+        <button type="button" name="Monthly">Monthly</button>
+        <canvas id="traffic_chart"></canvas>
+      </div>
+      <div class="daily_chart_wrapper">
+        <h3>Daily Traffic</h3>
+        <canvas id="daily_traffic_chart"></canvas>
+      </div>
+      <div class="mobile_users_chart_wrapper">
+        <h3>Mobile Users</h3>
+        <canvas id="mobile_users_chart"></canvas>
+      </div>
+      <article class="social_stats">
+        <h3>Social Stats</h3>
+        <div class="SoMe_wrapper">
+          <div class="SoMe_Icon_wrapper">
+            <img src="icons/icon-twitter.svg" alt="twitter_icon">
+          </div>
+          <h3 class="SoMe_Titel">Twitter</h3>
+          <p>9,999</p>
+        </div>
+      </article>
 
     </main>
 
     <footer role="contentinfo">
 
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
