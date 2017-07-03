@@ -194,8 +194,8 @@ button[name="close_button"]{
 }
 
 .traffic_chart_wrapper h3,
-.Daily_chart_wrapper h3,
-.mobile_users_chart_wrapper{
+.daily_chart_wrapper h3,
+.mobile_users_chart_wrapper h3{
   margin-top: 3rem;
   width: 100%;
   text-align: center;
@@ -255,27 +255,73 @@ button[name="close_button"]{
 
 /*-------New Members------*/
 
+.new_members h3{
+  margin-top: 3rem;
+}
 
 .member{
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
   width: 90%;
   margin: 1rem 5%;
+  border-bottom: solid 1px #2A5F67;
 }
 
 .member img{
     height: 5rem;
     width: 5rem;
-    margin-right: 2rem;
+    margin: 0 30%;
     border-radius: 50%;
 }
 
 .member p{
-  margin: 1rem 0 0 0;
+  text-align: center;
+  margin: 1rem 20%;
 }
 
 
+
+
+/*-------Recent activity------*/
+
+
+.recent_activity h3{
+  margin-top: 3rem;
+}
+
+.activity_member{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 1rem 5%;
+  border-bottom: solid 1px #2A5F67;
+}
+
+.activity_member img{
+    height: 3.5rem;
+    width: 3.5rem;
+    margin: 0 40%;
+    border-radius: 50%;
+}
+
+.activity_member p{
+  font-size: .9rem;
+  text-align: left;
+  margin: 1rem 0;
+}
+
+.arrow_left{
+  display: flex;
+  align-items: center;
+}
+
+.arrow_left img{
+    height: 2.5rem;
+    width: 2.5rem;
+    margin: 0 30%;
+}
 
 /*----Media 7xxpx ----
 
