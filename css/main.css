@@ -323,6 +323,49 @@ button[name="close_button"]{
     margin: 0 30%;
 }
 
+/*----Search/Message users----------*/
+
+.message_user{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.message_user h3{
+  margin-top: 3rem;
+}
+
+.message_user form{
+ width: 90%;
+ border-bottom: solid 1px #2A5F67;
+}
+
+.message_user fieldset{
+  border-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.message_user_form input[name="search_user"]{
+  width: 100%;
+  height: 5rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border: solid 2px #2A5F67;
+  border-radius: 6px;
+}
+
+.message_user_form textarea{
+  width: 100%;
+  height: 11rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border: solid 2px #2A5F67;
+  border-radius: 6px;
+}
+
+
+
 /*----Media 7xxpx ----
 
 header {

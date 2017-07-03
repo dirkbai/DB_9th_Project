@@ -156,17 +156,26 @@
         </div>
       </article>
       <article class="message_user">
+        <h3>Message User</h3>
         <form class="message_user_form" action="index.html" method="post">
           <fieldset>
-            <legend>search members</legend>
-            <input type="text" name="search_member" value="">
+            <legend>search users</legend>
+            <input type="text" name="search_user" placeholder="Search for User">
+            <textarea name="message_for_user" placeholder="Message for User"></textarea>
           </fieldset>
         </form>
       </article>
     </main>
 
     <footer role="contentinfo">
-
+      <h3>Settings</h3>
+      <form class="settings" action="index.html" method="post">
+        <fieldset>
+          <legend>Settings</legend>
+          <label for="send_e-mail_notification">Send E-mail Notification</label>
+          <input type="checkbox" name="send_e-mail_notification" id="send_e-mail_notification" value="html_format">
+        </fieldset>
+      </form>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.js"></script>
