@@ -265,6 +265,7 @@ button[name="close_button"]{
 .SoMe_wrapper p{
   font-weight: 300;
   font-size: 3.5rem;
+  text-align: center;
   margin: 0 0 0 10%;
 }
 
@@ -311,7 +312,7 @@ button[name="close_button"]{
 
 .activity_member{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
   width: 95%;
   margin: 1rem 2.5%;
@@ -348,6 +349,8 @@ button[name="close_button"]{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  width: 95%;
+margin: 1rem 2.5%;
 }
 
 .message_user h3{
