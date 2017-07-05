@@ -48,6 +48,12 @@ canvas {
     border-style: none;
  }
 
+article{
+  display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 /*-------------- Header ------------------*/
 
 header {
@@ -83,7 +89,7 @@ header {
   align-items: center;
   height: 75%;
   width: auto;
-  border-right: solid 1px #4f53b8;
+  border-right: solid 1px #2A5F67;
 }
 
 .bell_icon img{
@@ -120,16 +126,25 @@ nav li img{
 
 /*----Dashboard and Search----------*/
 
+.container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .Titel_area{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
+.Title_and_search{
+  width: 95%;
+}
+
 .search{
   display: flex;
   justify-content: center;
-  padding: 0.3rem;
+  padding: 0.5rem 0;
 
 }
 
@@ -171,7 +186,7 @@ fieldset:focus{
 .alert{
   display: flex;
   justify-content: center;
-  width: 86%;
+  width: 95%;
   color: white;
   background: #B42867;
   border-radius: 5px;
@@ -216,8 +231,8 @@ button[name="close_button"]{
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  width: 90%;
-  margin: 1rem 5%;
+  width: 95%;
+  margin: 1rem 2.5%;
   padding: 0 1rem;
   background-color: #ddd;
   border-radius: 5px;
@@ -267,8 +282,8 @@ button[name="close_button"]{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  width: 90%;
-  margin: 1rem 5%;
+  width: 95%;
+  margin: 1rem 2.5%;
   border-bottom: solid 1px #2A5F67;
 }
 
@@ -298,8 +313,8 @@ button[name="close_button"]{
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 90%;
-  margin: 1rem 5%;
+  width: 95%;
+  margin: 1rem 2.5%;
   border-bottom: solid 1px #2A5F67;
 }
 
@@ -340,7 +355,7 @@ button[name="close_button"]{
 }
 
 .message_user form{
- width: 90%;
+ width: 95%;
  border-bottom: solid 1px #2A5F67;
 }
 
@@ -367,7 +382,24 @@ button[name="close_button"]{
   border-radius: 6px;
 }
 
+.btn_submit_cancel{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.5rem;
+  width: 100%;
+  margin: 0 0 3rem 0;
+  background-color: #2A5F67;
+  color: white;
+  border-radius: 6px;
+}
+
+.btn_submit_cancel:active{
+  background-color: #B42867;
+}
+
 /*----Settings----------*/
+
 
 .e-mail_note_wrapper,
 .profile_public_wrapper{
@@ -448,6 +480,53 @@ button[name="close_button"]{
   border-radius: 50%;
 }
 
+#select_timezone{
+  width: 100%;
+  height: 3rem;
+  border: solid 2px #2A5F67;
+  border-radius: 6px;
+  appearance: none;
+  padding: 0 1rem;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: url("../icons/arrow_down.svg") no-repeat scroll 98%  transparent;
+  background-size: 1.4rem;
+  overflow: hidden;
+}
+
+#select_label{
+  font-weight: bold;
+}
+
+.buttons_save_submit{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.buttons_save_submit .btn_submit_cancel{
+  width: auto;
+  flex-grow: 1;
+  margin: 1rem 4%;
+}
+
+@media (min-width: 768px) {
+
+header{
+  justify-content: space-between;
+}
+
+/*---- Search ----*/
+
+.Title_and_search {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+}
 
 /*----Media 7xxpx ----
 

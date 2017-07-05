@@ -33,141 +33,145 @@
           <li><a href="#"><img src="icons/icon-visits.svg" alt="visits_icon"></a></li>
         </ul>
       </nav>
-      <div class="Titel_area">
-        <div class="Title_and_search">
-          <h2>Dashboard</h2>
-          <form class="search" action="index.html" method="post">
+      <div class="container">
+        <div class="Titel_area">
+          <div class="Title_and_search">
+            <h2>Dashboard</h2>
+            <form class="search" action="index.html" method="post">
+              <fieldset>
+                <legend>search</legend>
+                <div class="search_wrapper">
+                  <input type="text" id="Search_bar" name="Search_bar" placeholder="Search">
+                  <button type="button" name="search_button" class="search_button">
+                    <img src="icons/icon-search.svg" alt="search_icon">
+                  </button>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+          <div class="alert">
+            <p class="alert_text">ALERT this Site is pretty aweseome and was fun to create. Thanks for checking it out</p>
+            <button type="button" name="close_button">
+              <p class="close"><b>x</b></p>
+            </button>
+          </div>
+        </div>
+        <div class="traffic_chart_wrapper">
+          <h3>Traffic</h3>
+          <button type="button" name="Hourly">Hourly</button>
+          <button type="button" name="Daily">Daily</button>
+          <button type="button" name="Weekly" class="active_menu">Weekly</button>
+          <button type="button" name="Monthly">Monthly</button>
+          <canvas id="traffic_chart"></canvas>
+        </div>
+        <div class="daily_chart_wrapper">
+          <h3>Daily Traffic</h3>
+          <canvas id="daily_traffic_chart"></canvas>
+        </div>
+        <div class="mobile_users_chart_wrapper">
+          <h3>Mobile Users</h3>
+          <canvas id="mobile_users_chart"></canvas>
+        </div>
+        <article class="social_stats">
+          <h3 class="social_stats_title">Social Stats</h3>
+          <div class="SoMe_wrapper">
+            <div class="SoMe_Icon_wrapper">
+              <img src="icons/icon-twitter.svg" alt="twitter_icon">
+            </div>
+            <div class="SoMe_Text">
+              <h3 class="SoMe_Titel">Twitter</h3>
+              <p>9,999</p>
+            </div>
+          </div>
+          <div class="SoMe_wrapper">
+            <div class="SoMe_Icon_wrapper">
+              <img src="icons/icon-facebook.svg" alt="facebook_icon">
+            </div>
+            <div class="SoMe_Text">
+              <h3 class="SoMe_Titel">Facebook</h3>
+              <p>8,999</p>
+            </div>
+          </div>
+          <div class="SoMe_wrapper">
+            <div class="SoMe_Icon_wrapper">
+              <img src="icons/icon-google-plus.svg" alt="google-plus_icon">
+            </div>
+            <div class="SoMe_Text">
+              <h3 class="SoMe_Titel">Google+</h3>
+              <p>1,999</p>
+            </div>
+          </div>
+        </article>
+        <article class="new_members">
+          <h3>New Members</h3>
+          <div class="member">
+            <img src="img/2.jpg" alt="Jane Lee">
+            <p>Jane Lee<br>jane.lee@example.com</p>
+            <p>10/15/15</p>
+          </div>
+          <div class="member">
+            <img src="img/10.jpg" alt="Laura Shmith">
+            <p>Laura Shmith<br>laura.smith@example.com</p>
+            <p>10/05/15</p>
+          </div>
+          <div class="member">
+            <img src="img/32.jpg" alt="Ian McLaren">
+            <p>Ian McLaren<br>ian.mcLaren@example.com</p>
+            <p>12/06/15</p>
+          </div>
+          <div class="member">
+            <img src="img/70.jpg" alt="Jarome Kano">
+            <p>Jarome Kano<br>jarome.kano@example.com</p>
+            <p>01/28/15</p>
+          </div>
+        </article>
+        <article class="recent_activity">
+          <h3>Recent Activity</h3>
+          <div class="activity_member">
+            <img src="img/70.jpg" alt="Jarome Kano">
+            <p><b>Jarome Kano</b> commented on SEO Tips<br>4 hours ago</p>
+            <button class="arrow_left">
+              <img src="icons/arrow_left.svg" alt="arrow left">
+            </button>
+          </div>
+          <div class="activity_member">
+            <img src="img/69.jpg" alt="Judy Davis">
+            <p><b>Judy Davis</b> liked Jaromes comments<br>10 hours ago</p>
+            <button class="arrow_left">
+              <img src="icons/arrow_left.svg" alt="arrow left">
+            </button>
+          </div>
+          <div class="activity_member">
+            <img src="img/90.jpg" alt="Jimmy Lu">
+            <p><b>Jimmy Lu</b> commented Judys comments<br>12 hours ago</p>
+            <button class="arrow_left">
+              <img src="icons/arrow_left.svg" alt="arrow left">
+            </button>
+          </div>
+          <div class="activity_member">
+            <img src="img/38.jpg" alt="Dave Denis">
+            <p><b>Dave Denis</b> posted some Images<br>2 days ago</p>
+            <button class="arrow_left">
+              <img src="icons/arrow_left.svg" alt="arrow left">
+            </button>
+          </div>
+        </article>
+        <article class="message_user">
+          <h3>Message User</h3>
+          <form class="message_user_form" action="index.html" method="post">
             <fieldset>
-              <legend>search</legend>
-              <div class="search_wrapper">
-                <input type="text" id="Search_bar" name="Search_bar" placeholder="Search">
-                <button type="button" name="search_button" class="search_button">
-                  <img src="icons/icon-search.svg" alt="search_icon">
-                </button>
-              </div>
+              <legend>search users</legend>
+              <input type="text" name="search_user" placeholder="Search for User">
+              <textarea name="message_for_user" placeholder="Message for User"></textarea>
             </fieldset>
+            <button type="submit" class="btn_submit_cancel">Send</button>
           </form>
-        </div>
-        <div class="alert">
-          <p class="alert_text">ALERT this Site is pretty aweseome and was fun to create. Thanks for checking it out</p>
-          <button type="button" name="close_button">
-            <p class="close"><b>x</b></p>
-          </button>
-        </div>
+        </article>
+        <div class="footer" role="contentinfo">
       </div>
-      <div class="traffic_chart_wrapper">
-        <h3>Traffic</h3>
-        <button type="button" name="Hourly">Hourly</button>
-        <button type="button" name="Daily">Daily</button>
-        <button type="button" name="Weekly" class="active_menu">Weekly</button>
-        <button type="button" name="Monthly">Monthly</button>
-        <canvas id="traffic_chart"></canvas>
-      </div>
-      <div class="daily_chart_wrapper">
-        <h3>Daily Traffic</h3>
-        <canvas id="daily_traffic_chart"></canvas>
-      </div>
-      <div class="mobile_users_chart_wrapper">
-        <h3>Mobile Users</h3>
-        <canvas id="mobile_users_chart"></canvas>
-      </div>
-      <article class="social_stats">
-        <h3 class="social_stats_title">Social Stats</h3>
-        <div class="SoMe_wrapper">
-          <div class="SoMe_Icon_wrapper">
-            <img src="icons/icon-twitter.svg" alt="twitter_icon">
-          </div>
-          <div class="SoMe_Text">
-            <h3 class="SoMe_Titel">Twitter</h3>
-            <p>9,999</p>
-          </div>
-        </div>
-        <div class="SoMe_wrapper">
-          <div class="SoMe_Icon_wrapper">
-            <img src="icons/icon-facebook.svg" alt="facebook_icon">
-          </div>
-          <div class="SoMe_Text">
-            <h3 class="SoMe_Titel">Facebook</h3>
-            <p>8,999</p>
-          </div>
-        </div>
-        <div class="SoMe_wrapper">
-          <div class="SoMe_Icon_wrapper">
-            <img src="icons/icon-google-plus.svg" alt="google-plus_icon">
-          </div>
-          <div class="SoMe_Text">
-            <h3 class="SoMe_Titel">Google+</h3>
-            <p>1,999</p>
-          </div>
-        </div>
-      </article>
-      <article class="new_members">
-        <h3>New Members</h3>
-        <div class="member">
-          <img src="img/2.jpg" alt="Jane Lee">
-          <p>Jane Lee<br>jane.lee@example.com</p>
-          <p>10/15/15</p>
-        </div>
-        <div class="member">
-          <img src="img/10.jpg" alt="Laura Shmith">
-          <p>Laura Shmith<br>laura.smith@example.com</p>
-          <p>10/05/15</p>
-        </div>
-        <div class="member">
-          <img src="img/32.jpg" alt="Ian McLaren">
-          <p>Ian McLaren<br>ian.mcLaren@example.com</p>
-          <p>12/06/15</p>
-        </div>
-        <div class="member">
-          <img src="img/70.jpg" alt="Jarome Kano">
-          <p>Jarome Kano<br>jarome.kano@example.com</p>
-          <p>01/28/15</p>
-        </div>
-      </article>
-      <article class="recent_activity">
-        <h3>Recent Activity</h3>
-        <div class="activity_member">
-          <img src="img/70.jpg" alt="Jarome Kano">
-          <p><b>Jarome Kano</b> commented on SEO Tips<br>4 hours ago</p>
-          <button class="arrow_left">
-            <img src="icons/arrow_left.svg" alt="arrow left">
-          </button>
-        </div>
-        <div class="activity_member">
-          <img src="img/69.jpg" alt="Judy Davis">
-          <p><b>Judy Davis</b> liked Jaromes comments<br>10 hours ago</p>
-          <button class="arrow_left">
-            <img src="icons/arrow_left.svg" alt="arrow left">
-          </button>
-        </div>
-        <div class="activity_member">
-          <img src="img/90.jpg" alt="Jimmy Lu">
-          <p><b>Jimmy Lu</b> commented Judys comments<br>12 hours ago</p>
-          <button class="arrow_left">
-            <img src="icons/arrow_left.svg" alt="arrow left">
-          </button>
-        </div>
-        <div class="activity_member">
-          <img src="img/38.jpg" alt="Dave Denis">
-          <p><b>Dave Denis</b> posted some Images<br>2 days ago</p>
-          <button class="arrow_left">
-            <img src="icons/arrow_left.svg" alt="arrow left">
-          </button>
-        </div>
-      </article>
-      <article class="message_user">
-        <h3>Message User</h3>
-        <form class="message_user_form" action="index.html" method="post">
-          <fieldset>
-            <legend>search users</legend>
-            <input type="text" name="search_user" placeholder="Search for User">
-            <textarea name="message_for_user" placeholder="Message for User"></textarea>
-          </fieldset>
-        </form>
-      </article>
     </main>
 
-    <footer role="contentinfo">
+    <div class="footer" role="contentinfo">
       <h3>Settings</h3>
       <form class="settings" action="index.html" method="post">
         <fieldset>
@@ -188,9 +192,23 @@
               <span class="onoffswitch-inner"></span>
             </label>
           </div>
+          <select id="select_timezone" name="select_timezone">
+            <optgroup label="">
+              <option value="GMT_sel" id="select_label" selected>Select Timezone</option>
+              <option value="GMT">GMT London</option>
+              <option value="GMT+1">GMT+1 Vienna, Paris, Berlin</option>
+              <option value="GMT+2">GMT+2 Kiew</option>
+              <option value="GMT+3">GMT+3 Moscow</option>
+              <option value="GMT+4">GMT+4 Tiblisi</option>
+            </optgroup>
+          </select>
         </fieldset>
+        <div class="buttons_save_submit">
+          <button type="submit" class="btn_submit_cancel">Save</button>
+          <button type="submit" class="btn_submit_cancel">Cancel</button>
+        </div>
       </form>
-    </footer>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.js"></script>
     <script src="js/main.js"></script>
