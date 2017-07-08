@@ -129,12 +129,14 @@ nav li img{
 .container{
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .Titel_area{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  flex-grow: 2;
 }
 
 .Title_and_search{
@@ -144,6 +146,7 @@ nav li img{
 .search{
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 0.5rem 0;
 
 }
@@ -201,6 +204,7 @@ button[name="close_button"]{
   margin: 1rem;
 }
 
+
 /*-------chart------*/
 
 .traffic_chart_wrapper,
@@ -218,6 +222,10 @@ button[name="close_button"]{
   margin-top: 3rem;
   width: 100%;
   text-align: center;
+}
+
+.buttons_traffic{
+  display: flex;
 }
 
 .traffic_chart_wrapper button{
@@ -403,13 +411,17 @@ margin: 1rem 2.5%;
 
 /*----Settings----------*/
 
+.footer{
+  width: 95%;
+  margin: 1rem 2.5%;
+}
 
 .e-mail_note_wrapper,
 .profile_public_wrapper{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.8rem;
 }
 
 /* The switch - the box around the slider */
@@ -490,6 +502,7 @@ margin: 1rem 2.5%;
   border-radius: 6px;
   appearance: none;
   padding: 0 1rem;
+  margin-bottom: 2rem;
   -moz-appearance: none;
   -webkit-appearance: none;
   background: url("../icons/arrow_down.svg") no-repeat scroll 98%  transparent;
@@ -504,14 +517,11 @@ margin: 1rem 2.5%;
 .buttons_save_submit{
   display: flex;
   justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
 }
 
 .buttons_save_submit .btn_submit_cancel{
-  width: auto;
-  flex-grow: 1;
-  margin: 1rem 4%;
+  width: 45%;
 }
 
 @media (min-width: 768px) {
@@ -525,9 +535,105 @@ header{
 .Title_and_search {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
+.search{
+  width: 75%;
+  justify-content: flex-end;
+  background: #eee;
+  margin-bottom: 1rem;
+  border-bottom: solid 1px #2E7581;
+  border-left: solid 1px #2E7581;
+}
 
+.search fieldset{
+  width: auto;
+  background-color: white;
+  margin-right: 5%;
+}
+
+.Title_and_search h2{
+  margin-left: 5%;
+}
+
+button[name="close_button"] {
+    margin: 0;
+    text-align: left;
+  }
+
+  /*-------overall order and wrapping for Charts and Stats------*/
+
+  .traffic_chart_wrapper{
+    width: 95%;
+    margin-top: 3rem;
+  }
+
+  .daily_chart_wrapper,
+  .mobile_users_chart_wrapper,
+  .new_members,
+  .recent_activity,
+  .message_user,
+  .footer
+  {
+    flex: 1 50%;
+    width: 50%;
+    margin: 0;
+  }
+
+  /*-------traffic_chart_wrapper------*/
+
+    .traffic_chart_wrapper h3{
+      flex-grow: 1;
+      width: 50%;
+      margin: auto;
+      text-align: left;
+    }
+
+    .buttons_traffic{
+      flex-grow: 1;
+      width: 50%;
+      justify-content: flex-end;
+    }
+
+  .message_user,
+  .footer{
+    align-items: stretch;
+  }
+
+  .message_user{
+    margin: 0;
+    border-style: none;
+  }
+
+  .message_user form,
+  .footer form{
+    height: 21rem;
+    border-style: none;
+    width: 95%;
+    margin: 0 2.5%;
+  }
+
+.message_user_form input[name="search_user"]{
+  height: 4rem;
+}
+
+.message_user_form textarea {
+  height: auto;
+}
+
+  .footer h3{
+    margin-top: 3rem;
+  }
+
+  .settings fieldset{
+    padding: 0;
+    margin: 0;
+  }
+
+  #select_timezone{
+  height: 4rem;
+  }
 
 }
 

@@ -58,10 +58,12 @@
         </div>
         <div class="traffic_chart_wrapper">
           <h3>Traffic</h3>
-          <button type="button" name="Hourly">Hourly</button>
-          <button type="button" name="Daily">Daily</button>
-          <button type="button" name="Weekly" class="active_menu">Weekly</button>
-          <button type="button" name="Monthly">Monthly</button>
+          <div class="buttons_traffic">
+            <button type="button" name="Hourly">Hourly</button>
+            <button type="button" name="Daily">Daily</button>
+            <button type="button" name="Weekly" class="active_menu">Weekly</button>
+            <button type="button" name="Monthly">Monthly</button>
+          </div>
           <canvas id="traffic_chart"></canvas>
         </div>
         <div class="daily_chart_wrapper">
@@ -167,48 +169,48 @@
             <button type="submit" class="btn_submit_cancel">Send</button>
           </form>
         </article>
-        <div class="footer" role="contentinfo">
+        <div class="footer">
+          <h3>Settings</h3>
+          <form class="settings" action="index.html" method="post">
+            <fieldset>
+              <legend>Settings</legend>
+              <div class="e-mail_note_wrapper">
+                <label for="send_e-mail_notification">Send E-mail Notification</label>
+                <label class="switch">
+                  <input type="checkbox" checked>
+                  <div class="slider round"></div>
+                  <span class="onoffswitch-inner"></span>
+                </label>
+              </div>
+              <div class="profile_public_wrapper">
+                <label for="send_e-mail_notification">Set Profile to Public</label>
+                <label class="switch">
+                  <input type="checkbox" checked>
+                  <div class="slider round"></div>
+                  <span class="onoffswitch-inner"></span>
+                </label>
+              </div>
+              <select id="select_timezone" name="select_timezone">
+                <optgroup label="">
+                  <option value="GMT_sel" id="select_label" selected>Select Timezone</option>
+                  <option value="GMT">GMT London</option>
+                  <option value="GMT+1">GMT+1 Vienna, Paris, Berlin</option>
+                  <option value="GMT+2">GMT+2 Kiew</option>
+                  <option value="GMT+3">GMT+3 Moscow</option>
+                  <option value="GMT+4">GMT+4 Tiblisi</option>
+                </optgroup>
+              </select>
+            </fieldset>
+            <div class="buttons_save_submit">
+              <button type="submit" class="btn_submit_cancel">Save</button>
+              <button type="submit" class="btn_submit_cancel">Cancel</button>
+            </div>
+          </form>
+        </div>
+
       </div>
     </main>
 
-    <div class="footer" role="contentinfo">
-      <h3>Settings</h3>
-      <form class="settings" action="index.html" method="post">
-        <fieldset>
-          <legend>Settings</legend>
-          <div class="e-mail_note_wrapper">
-            <label for="send_e-mail_notification">Send E-mail Notification</label>
-            <label class="switch">
-              <input type="checkbox" checked>
-              <div class="slider round"></div>
-              <span class="onoffswitch-inner"></span>
-            </label>
-          </div>
-          <div class="profile_public_wrapper">
-            <label for="send_e-mail_notification">Set Profile to Public</label>
-            <label class="switch">
-              <input type="checkbox" checked>
-              <div class="slider round"></div>
-              <span class="onoffswitch-inner"></span>
-            </label>
-          </div>
-          <select id="select_timezone" name="select_timezone">
-            <optgroup label="">
-              <option value="GMT_sel" id="select_label" selected>Select Timezone</option>
-              <option value="GMT">GMT London</option>
-              <option value="GMT+1">GMT+1 Vienna, Paris, Berlin</option>
-              <option value="GMT+2">GMT+2 Kiew</option>
-              <option value="GMT+3">GMT+3 Moscow</option>
-              <option value="GMT+4">GMT+4 Tiblisi</option>
-            </optgroup>
-          </select>
-        </fieldset>
-        <div class="buttons_save_submit">
-          <button type="submit" class="btn_submit_cancel">Save</button>
-          <button type="submit" class="btn_submit_cancel">Cancel</button>
-        </div>
-      </form>
-    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.js"></script>
     <script src="js/main.js"></script>
