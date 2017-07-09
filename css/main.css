@@ -612,6 +612,75 @@ button[name="close_button"] {
     background-color: #2E7581;
   }
 
+  /*-------SoMe Stats------*/
+
+.social_stats{
+  width: 95%;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.social_stats h3{
+  flex: 3 100%;
+  text-align: left;
+}
+
+.SoMe_wrapper{
+  margin: 0;
+  width: 30%;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+
+.SoMe_Text h3,
+.SoMe_Text p{
+  text-align: center;
+  margin: 0;
+}
+
+.SoMe_Icon_wrapper{
+  margin: 1rem;
+}
+
+/*-------members------*/
+
+.new_members h3,
+.recent_activity h3,
+.message_user h3,
+.footer h3{
+  width: 100%;
+  text-align: left;
+}
+
+.member {
+  width: 100%;
+  margin: 0 0 2rem 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.member img,
+.recent_activity img{
+  margin: 0 1rem 1rem 0;
+}
+
+.recent_activity button img{
+  margin: 0 0 1rem 0;
+}
+
+.member p{
+  text-align: left;
+  margin: 0;
+}
+
+.activity_member{
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin: 0;
+}
+
+/*-------message user------*/
 
   .message_user,
   .footer{
@@ -619,7 +688,6 @@ button[name="close_button"] {
   }
 
   .message_user{
-    margin: 0;
     border-style: none;
   }
 
@@ -650,6 +718,7 @@ button[name="close_button"] {
 
   #select_timezone{
   height: 4rem;
+  margin-bottom: 2.4rem;
   }
 
 }
