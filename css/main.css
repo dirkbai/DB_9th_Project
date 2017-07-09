@@ -578,7 +578,6 @@ button[name="close_button"] {
   {
     width: 45%;
     margin: 0 0 2rem 0;
-    align-self: stretch;
   }
 
   /*-------traffic_chart_wrapper------*/
