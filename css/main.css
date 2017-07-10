@@ -611,6 +611,11 @@ button[name="close_button"] {
     background-color: #2E7581;
   }
 
+  .daily_chart_wrapper h3,
+  .mobile_users_chart_wrapper h3{
+    text-align: left;
+  }
+
   /*-------SoMe Stats------*/
 
 .social_stats{
@@ -694,8 +699,8 @@ button[name="close_button"] {
   .footer form{
     height: 21rem;
     border-style: none;
-    width: 95%;
-    margin: 0 2.5%;
+    width: 100%;
+    margin: 0;
   }
 
 .message_user_form input[name="search_user"]{
@@ -719,6 +724,88 @@ button[name="close_button"] {
   height: 4rem;
   margin-bottom: 2.4rem;
   }
+
+}
+
+
+@media (min-width: 1024px) {
+
+.main_profile{
+  margin-right: 2rem;
+}
+
+h1{
+  margin-left: 2rem;
+}
+
+  #main {
+    display: flex;
+  }
+
+main nav{
+  display: flex;
+  flex: 1 10%;
+}
+
+.container{
+  flex: 3 90%;
+}
+
+.nav{
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding-top: 2rem;
+}
+
+.nav li{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.active_menu{
+  border-bottom: 0;
+  border-left: solid .3rem #C0B76B;
+}
+
+/*-------Title and Search------*/
+
+.alert {
+  justify-content: space-between;
+}
+
+.alert button p{
+  padding-right: 1rem;
+}
+
+
+/*-------traffic_chart_wrapper------*/
+
+.buttons_traffic .active_menu{
+    border-left: 0;
+  border-bottom: solid .3rem #C0B76B;
+  border-radius: 5%;
+}
+
+/*------social_stats------*/
+
+.SoMe_wrapper{
+  padding: 1rem;
+}
+
+.SoMe_Text h3, .SoMe_Text p{
+  text-align: left;
+}
+
+.member_name_mail{
+  flex-grow: 2;
+}
+
+.activity_member p{
+  flex-grow: 2;
+}
 
 }
 
