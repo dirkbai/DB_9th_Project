@@ -1,4 +1,15 @@
-var ctx = document.getElementById('traffic_chart').getContext('2d');
+var alert = document.querySelector('.alert');
+var alertBtn = document.querySelector('.close_button');
+
+
+
+alertBtn.addEventListener('click', () => {
+   alert.style.display = 'none'
+});
+
+
+
+var ctx = document.getElementById('traffic_chart_weekly').getContext('2d');
 var chart = new Chart(ctx, {
     // The type of chart we want to create
     type: 'line',
@@ -40,6 +51,7 @@ var chart = new Chart(ctx, {
     }
 });
 
+
 var ctx = document.getElementById('mobile_users_chart').getContext('2d');
 var chart = new Chart(ctx, {
     // The type of chart we want to create
@@ -59,3 +71,5 @@ var chart = new Chart(ctx, {
 
     }
 });
+
+Chart.defaults.global.defaultFontFamily = 'Titillium Web';

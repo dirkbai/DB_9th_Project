@@ -96,6 +96,64 @@ header {
     height: 40px;
 }
 
+
+/*--------------Tool-tipp----------*/
+
+.tool{
+  position: relative;
+}
+
+.tool::before,
+.tool::after{
+  position: absolute;
+  left: 50%;
+  opacity: 0;
+  z-index: -100;
+}
+
+
+.tool:focus::before,
+.tool:focus::after{
+  opacity: 1;
+  z-index: 100;
+  transform: scale(1) translateY(0);
+}
+
+.tool::before{
+  border-style: solid;
+  border-width: 1em .75em 0em .75em;
+  border-color: #B42867 transparent transparent transparent;
+  bottom: -80%;
+  margin-left: -.5em;
+  content: "";
+  transform: scale(.6) translateY(-90%);
+  transition: all .65s cubic-bezier(.85, -0.18, .31, 1.26), opacity .65s .5s;
+}
+
+
+.tool:focus::before {
+  transition-delay: .2s;
+}
+
+.tool::after{
+  background: #B42867;
+  border-radius: 6px;
+  top: 180%;
+  color: #EDEFF0;
+  width: 12.5rem;
+  padding: 1rem;
+  margin-left: -8.75em;
+  content: "Jimmy tagged you" "Jarome liked your comment";
+  transform: scale(.6) translateY(50%);
+  transition: all .65s cubic-bezier(.84, -.18, .31, 1.26) .2s;
+}
+
+
+.tool:focus::after{
+  transition-delay: 0s;
+}
+
+
 /*---------------Main Content----------*/
 
 
@@ -200,7 +258,7 @@ fieldset:focus{
   margin: .3rem;
 }
 
-button[name="close_button"]{
+button .close_button {
   margin: 1rem;
 }
 
@@ -230,6 +288,17 @@ button[name="close_button"]{
 
 .traffic_chart_wrapper button{
   margin: 1rem .3rem;
+  transition: .3s;
+}
+
+.traffic_chart_wrapper button:hover{
+    border-bottom: solid .3rem #2E7581;
+    border-radius: 5%;
+}
+
+.traffic_chart_wrapper button:focus{
+  border-bottom: solid .3rem #C0B76B;
+  border-radius: 5%;
 }
 
 /*-------Social Stats------*/
