@@ -155,7 +155,38 @@ const chartHourly = document.getElementById('traffic_chart_hourly');
 const chartDaily = document.getElementById('traffic_chart_daily');
 const chartWeekly = document.getElementById('traffic_chart_weekly');
 const chartMonthly = document.getElementById('traffic_chart_monthly');
+var chartBtn = document.getElementsByClassName('menu_btn');
+
+let chartsMain = [chartHourly, chartDaily, chartWeekly, chartMonthly];
 
 chartHourly.style.display='none';
 chartDaily.style.display='none';
 chartMonthly.style.display='none';
+
+chartBtn[0].addEventListener('click', () => {
+  chartHourly.style.display='flex';
+  chartDaily.style.display='none';
+  chartMonthly.style.display='none';
+  chartWeekly.style.display='none';
+});
+
+chartBtn[1].addEventListener('click', () => {
+  chartHourly.style.display='none';
+  chartDaily.style.display='flex';
+  chartMonthly.style.display='none';
+  chartWeekly.style.display='none';
+});
+
+chartBtn[2].addEventListener('click', () => {
+  chartHourly.style.display='none';
+  chartDaily.style.display='none';
+  chartMonthly.style.display='none';
+  chartWeekly.style.display='flex';
+});
+
+chartBtn[3].addEventListener('click', () => {
+  chartHourly.style.display='none';
+  chartDaily.style.display='none';
+  chartMonthly.style.display='flex';
+  chartWeekly.style.display='none';
+});
