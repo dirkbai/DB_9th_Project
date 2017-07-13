@@ -59,12 +59,15 @@
         <div class="traffic_chart_wrapper">
           <h3>Traffic</h3>
           <div class="buttons_traffic">
-            <button type="button" name="Hourly">Hourly</button>
-            <button type="button" name="Daily">Daily</button>
-            <button type="button" name="Weekly" class="active_menu">Weekly</button>
-            <button type="button" name="Monthly">Monthly</button>
+            <button type="button" name="Hourly" class="menu_btn">Hourly</button>
+            <button type="button" name="Daily" class="menu_btn">Daily</button>
+            <button type="button" name="Weekly" class="menu_btn" id="focus_default">Weekly</button>
+            <button type="button" name="Monthly" class="menu_btn">Monthly</button>
           </div>
-          <canvas id="traffic_chart_weekly"></canvas>
+          <canvas id="traffic_chart_hourly" class="main_traffic_charts"></canvas>
+          <canvas id="traffic_chart_daily" class="main_traffic_charts"></canvas>
+          <canvas id="traffic_chart_weekly" class="main_traffic_charts"></canvas>
+          <canvas id="traffic_chart_monthly" class="main_traffic_charts"></canvas>
         </div>
         <div class="border_h">
         </div>

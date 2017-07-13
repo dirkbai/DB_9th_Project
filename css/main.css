@@ -286,20 +286,22 @@ button .close_button {
   display: flex;
 }
 
-.traffic_chart_wrapper button{
+.traffic_chart_wrapper .menu_btn{
   margin: 1rem .3rem;
   transition: .3s;
 }
 
-.traffic_chart_wrapper button:hover{
+.traffic_chart_wrapper .menu_btn:hover{
     border-bottom: solid .3rem #2E7581;
     border-radius: 5%;
 }
 
-.traffic_chart_wrapper button:focus{
+.traffic_chart_wrapper .menu_btn:focus{
   border-bottom: solid .3rem #C0B76B;
   border-radius: 5%;
 }
+
+
 
 /*-------Social Stats------*/
 
