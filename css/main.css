@@ -301,7 +301,39 @@ button .close_button {
   border-radius: 5%;
 }
 
+.mobile_users_chart{
+  width: 100%;
+}
 
+.mobile_users_chart_legent{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.phones, .tablets, .desktop {
+  display: flex;
+  width: 10rem;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.phones_square, .tablets_square, .desktop_square {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 6px;
+  background-color: #2A5F67;
+}
+
+.tablets_square{
+  background-color: #B42867;
+}
+
+.desktop_square{
+  background-color:#C0B76B;
+}
 
 /*-------Social Stats------*/
 
@@ -542,6 +574,16 @@ margin: 1rem 2.5%;
     color: white;
 }
 
+.onoffswitch-inner-after:before {
+  position: absolute;
+  top: 2px;
+  left: 34px;
+  content: "OFF";
+  color: white;
+  transition: .5s;
+}
+
+
 
 .switch input:checked + .slider {
   background-color: #2E7581;
@@ -685,7 +727,24 @@ button[name="close_button"] {
   .daily_chart_wrapper h3,
   .mobile_users_chart_wrapper h3{
     text-align: left;
+    flex: 2 100%;
   }
+
+.mobile_users_chart_wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile_users_chart {
+  Width: 60%;
+}
+
+.mobile_users_chart_legent {
+  width: 34%;
+}
+
+
 
   /*-------SoMe Stats------*/
 

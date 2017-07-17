@@ -6,7 +6,7 @@ alertBtn.addEventListener('click', () => {
    alert.style.display = 'none'
 });
 
-
+Chart.defaults.global.legend.display = false;
 
 var ctx = document.getElementById('traffic_chart_hourly').getContext('2d');
 var chart = new Chart(ctx, {
@@ -19,7 +19,7 @@ var chart = new Chart(ctx, {
         datasets: [{
             backgroundColor: '#B4527F',
             borderColor: '#B42867',
-            data: [0.5, 10.45, 1.10, 2.5, 8.2, 6.20, 8.30],
+            data: [0.5, 1.45, 5.10, 2, 7.2, 0.20, 6.30],
         }]
     },
 
@@ -190,3 +190,173 @@ chartBtn[3].addEventListener('click', () => {
   chartMonthly.style.display='flex';
   chartWeekly.style.display='none';
 });
+
+//
+// ------------------------- Submit Button
+
+var submitBtn = document.getElementById('submit_btn');
+var userMessage = document.getElementById('message_for_user');
+var userSearch = document.getElementById('search_user');
+
+// submitBtn.addEventListener('click', () =>{
+//   // submitBtn.submit();
+//   if (document.getElementById('search_user').value.trim() == '') {
+//   alert("please enter a User");
+// } if else (document.getElementById('message_for_user').value.trim() == ''){
+//   alert("please enter a Message");
+// } else {
+//     alert("Message has been sent");
+// }
+// });
+
+// function message() {
+//   if (document.getElementById('search_user').value.trim() == '') {
+//     alert('Please add a user name.');
+//   } else if (document.getElementById('message_for_user').value.trim() == '') {
+//     alert('Please add a message.');
+//
+//     } else {
+//       alert('Message was sent.');
+//     }
+// };
+
+//
+// submitBtn.addEventListener('click', () =>{console.log(submitBtn);
+//   //submitBtn.submit();
+//   if (userMessage.value == "") {
+//   window.alert("sometext");
+// } else if (userSearch.value == ""){
+// window.alert("sometext");
+// } else {
+// window.alert("sometext");
+// }
+// });
+
+// $('#message_user_form').on('click', 'button', (e) => {
+//   e.preventDefault();
+//
+//   let userName = userSearch.val(); //searchForUser global variable
+//   let userMessageVal = userMessage.val();
+//
+//   if (userName.length > 0 && userMessageVal.length > 0) {
+//     // Sent notice
+//     sentDialogHtml =
+//       alert(`Your message to ${userName} has been sent`);
+//     // Clear Input and Textarea values
+//     messageForm.find("input[type=text], textarea").val("");
+//   } else {
+//     // Error notice
+//     sentDialogHtml =
+//    alert('Please add a user name.');
+//   }
+//
+// });
+
+
+// ------------------------- Settings checkbox
+
+var checkBox = document.getElementById('profile-public');
+var switchText = document.getElementById('mail_switch_inner');
+
+
+
+checkBox.addEventListener('click', () => {
+  if (switchText.className === 'onoffswitch-inner') {
+  switchText.className = 'onoffswitch-inner-after';
+}
+});
+//
+// checkBox.addEventListener('click', () => {
+//   document.getElementById('mail_switch_inner').className = 'onoffswitch-inner';
+// });
+
+
+// ------------------------- Lokal Storrage
+
+// -------------- Versuch 1
+
+// let settingNotifications = $('#send_e-mail_notification');
+// let settingProfilePublic = $('#profile-public');
+// let settingTimezone = $('#select-timezone');
+
+//
+// // Click event to save user settings to localStorage
+// $('#save-btn').on('click', (e) => {
+//   e.preventDefault();
+//
+//   // Variables to store setting values
+//   let notificationsStatus = settingNotifications.prop('checked');
+//   let profileStatus = settingProfilePublic.prop('checked');
+//   let timezoneValue = settingTimezone.val();
+//   //Set LocalStorage keys and values
+//   localStorage.setItem('notifications', JSON.stringify(notificationsStatus));
+//   localStorage.setItem('profile', JSON.stringify(profileStatus));
+//   localStorage.setItem('timezone', JSON.stringify(timezoneValue));
+// });
+//
+// // Click event to reset settings and remove localStorage
+// $('#cancel-btn').on('click', () => {
+//   localStorage.clear();
+// });
+//
+// $(window).on("load", () => {
+//   // Call function to check if localStorage exists
+//   if (supportsLocalStorage) {
+//     // If localStorage exists, retrieve settings values and set to variables below
+//     let notificationsStatus = JSON.parse(localStorage.getItem('notifications'));
+//     let profileStatus = JSON.parse(localStorage.getItem('profile'));
+//     let timezoneValue = JSON.parse(localStorage.getItem('timezone'));
+//     // Set toggle switches and select field to retrieved values
+//     settingNotifications.prop('checked', notificationsStatus);
+//     settingProfilePublic.prop('checked', profileStatus);
+//     settingTimezone.val(timezoneValue);
+//   }
+// });
+//
+// // Function to check if localStorage exists by returning true or false if an error is thrown
+// let supportsLocalStorage = () => {
+//   try {
+//     return 'localStorage' in window && window.localStorage !== null;
+//   } catch (e) {
+//     return false;
+//   }
+// };
+
+
+
+
+
+
+// -------------- Versuch 2
+
+//
+// function supportsLocalStorage() {
+//   try {
+//   return 'localStorage' in window && window['localStorage'] !== null;
+//   } catch(e){
+//   return false;
+//   }
+// }
+
+
+// -------------- Versuch 3
+
+
+//
+// function mailNote(){
+//   var searches = localStorage.getItem('recentSearches');
+// if(searches){
+//  return JSON.parse(searches);
+// } else {
+//   return[];
+// }
+// }
+
+ //
+ // window.onload = function() {
+ //   if (supportsLocalStorage){
+ //
+ //
+ //
+ //   }
+ // }
