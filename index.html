@@ -218,19 +218,23 @@
               <legend>Settings</legend>
               <div class="e-mail_note_wrapper">
                 <label for="send_e-mail_notification">Send E-mail Notification</label>
-                <label class="switch">
-                  <input type="checkbox" id="send_e-mail_notification" checked>
-                  <div class="slider round"></div>
-                  <span class="onoffswitch-inner"></span>
-                </label>
+                <div class="onoffswitch">
+                  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="notification-switch">
+                  <label class="onoffswitch-label" for="notification-switch">
+                    <span class="onoffswitch-inner"></span>
+                    <span class="onoffswitch-switch"></span>
+                  </label>
+                </div>
               </div>
               <div class="profile_public_wrapper">
                 <label for="send_e-mail_notification">Set Profile to Public</label>
-                <label class="switch">
-                  <input type="checkbox" id="profile-public" checked>
-                  <div class="slider round"></div>
-                  <span class="onoffswitch-inner" id="mail_switch_inner"></span>
-                </label>
+                <div class="onoffswitch">
+                  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="notification-switch">
+                  <label class="onoffswitch-label" for="notification-switch">
+                    <span class="onoffswitch-inner"></span>
+                    <span class="onoffswitch-switch"></span>
+                  </label>
+                </div>
               </div>
               <select id="select_timezone" name="select_timezone">
                 <optgroup label="">

@@ -255,16 +255,16 @@ var userSearch = document.getElementById('search_user');
 
 // ------------------------- Settings checkbox
 
-var checkBox = document.getElementById('profile-public');
-var switchText = document.getElementById('mail_switch_inner');
-
-
-
-checkBox.addEventListener('click', () => {
-  if (switchText.className === 'onoffswitch-inner') {
-  switchText.className = 'onoffswitch-inner-after';
-}
-});
+// var checkBox = document.getElementById('profile-public');
+// var switchText = document.getElementById('mail_switch_inner');
+//
+//
+// 
+// checkBox.addEventListener('click', () => {
+//   if (switchText.className === 'onoffswitch-inner') {
+//   switchText.className = 'onoffswitch-inner-after';
+// }
+// });
 //
 // checkBox.addEventListener('click', () => {
 //   document.getElementById('mail_switch_inner').className = 'onoffswitch-inner';
