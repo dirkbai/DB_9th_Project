@@ -194,9 +194,7 @@ chartBtn[3].addEventListener('click', () => {
 //
 // ------------------------- Submit Button
 
-var submitBtn = document.getElementById('submit_btn');
-var userMessage = document.getElementById('message_for_user');
-var userSearch = document.getElementById('search_user');
+
 
 // submitBtn.addEventListener('click', () =>{
 //   // submitBtn.submit();
@@ -232,21 +230,32 @@ var userSearch = document.getElementById('search_user');
 // }
 // });
 
+var submitBtn = document.getElementById('submit_btn');
+var userMessage = document.getElementById('message_for_user');
+var userSearch = document.getElementById('search_user');
+var formSearch = document.querySelector('.message_user_form');
+
+let userName = userSearch.value; //searchForUser global variable
+let userMessageVal = userMessage.value;
+
+  submitBtn.addEventListener('click', () => {
+    alert('test');
+
+  });
+
+
 // $('#message_user_form').on('click', 'button', (e) => {
 //   e.preventDefault();
 //
-//   let userName = userSearch.val(); //searchForUser global variable
-//   let userMessageVal = userMessage.val();
+//
 //
 //   if (userName.length > 0 && userMessageVal.length > 0) {
 //     // Sent notice
-//     sentDialogHtml =
 //       alert(`Your message to ${userName} has been sent`);
 //     // Clear Input and Textarea values
 //     messageForm.find("input[type=text], textarea").val("");
 //   } else {
 //     // Error notice
-//     sentDialogHtml =
 //    alert('Please add a user name.');
 //   }
 //
@@ -275,53 +284,53 @@ var userSearch = document.getElementById('search_user');
 
 // -------------- Versuch 1
 
-let settingNotifications = $('#e-mail-notification-switch');
-let settingProfilePublic = $('#public-switch');
-let settingTimezone = $('#select-timezone');
+// let settingNotifications = $('#e-mail-notification-switch');
+// let settingProfilePublic = $('#public-switch');
+// let settingTimezone = $('#select-timezone');
 
-
-// Click event to save user settings to localStorage
-$('#save-btn').on('click', (e) => {
-  e.preventDefault();
-
-  // Variables to store setting values
-  let notificationsStatus = settingNotifications.prop('checked');
-  let profileStatus = settingProfilePublic.prop('checked');
-  let timezoneValue = settingTimezone.val();
-  //Set LocalStorage keys and values
-  localStorage.setItem('notifications', JSON.stringify(notificationsStatus));
-  localStorage.setItem('profile', JSON.stringify(profileStatus));
-  localStorage.setItem('timezone', JSON.stringify(timezoneValue));
-});
-
-// Click event to reset settings and remove localStorage
-$('#cancel-btn').on('click', () => {
-  localStorage.clear();
-});
-
-$(window).on("load", () => {
-  // Call function to check if localStorage exists
-  if (supportsLocalStorage) {
-    // If localStorage exists, retrieve settings values and set to variables below
-    let notificationsStatus = JSON.parse(localStorage.getItem('notifications'));
-    let profileStatus = JSON.parse(localStorage.getItem('profile'));
-    let timezoneValue = JSON.parse(localStorage.getItem('timezone'));
-    // Set toggle switches and select field to retrieved values
-    settingNotifications.prop('checked', notificationsStatus);
-    settingProfilePublic.prop('checked', profileStatus);
-    settingTimezone.val(timezoneValue);
-  }
-});
-
-// Function to check if localStorage exists by returning true or false if an error is thrown
-let supportsLocalStorage = () => {
-  try {
-    return 'localStorage' in window && window.localStorage !== null;
-  } catch (e) {
-    return false;
-  }
-};
-
+//
+// // Click event to save user settings to localStorage
+// $('#save-btn').on('click', (e) => {
+//   e.preventDefault();
+//
+//   // Variables to store setting values
+//   let notificationsStatus = settingNotifications.prop('checked');
+//   let profileStatus = settingProfilePublic.prop('checked');
+//   let timezoneValue = settingTimezone.val();
+//   //Set LocalStorage keys and values
+//   localStorage.setItem('notifications', JSON.stringify(notificationsStatus));
+//   localStorage.setItem('profile', JSON.stringify(profileStatus));
+//   localStorage.setItem('timezone', JSON.stringify(timezoneValue));
+// });
+//
+// // Click event to reset settings and remove localStorage
+// $('#cancel-btn').on('click', () => {
+//   localStorage.clear();
+// });
+//
+// $(window).on("load", () => {
+//   // Call function to check if localStorage exists
+//   if (supportsLocalStorage) {
+//     // If localStorage exists, retrieve settings values and set to variables below
+//     let notificationsStatus = JSON.parse(localStorage.getItem('notifications'));
+//     let profileStatus = JSON.parse(localStorage.getItem('profile'));
+//     let timezoneValue = JSON.parse(localStorage.getItem('timezone'));
+//     // Set toggle switches and select field to retrieved values
+//     settingNotifications.prop('checked', notificationsStatus);
+//     settingProfilePublic.prop('checked', profileStatus);
+//     settingTimezone.val(timezoneValue);
+//   }
+// });
+//
+// // Function to check if localStorage exists by returning true or false if an error is thrown
+// let supportsLocalStorage = () => {
+//   try {
+//     return 'localStorage' in window && window.localStorage !== null;
+//   } catch (e) {
+//     return false;
+//   }
+// };
+//
 
 
 

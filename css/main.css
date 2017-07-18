@@ -527,6 +527,10 @@ margin: 1rem 2.5%;
   margin-bottom: 1.8rem;
 }
 
+.e-mail_note_wrapper p,
+.profile_public_wrapper p{
+  margin: 0;
+}
 
 .onoffswitch {
   position: relative;
@@ -841,7 +845,7 @@ button[name="close_button"] {
 
   #select_timezone{
   height: 4rem;
-  margin-bottom: 2.8rem;
+  margin-bottom: 2.7rem;
   }
 
 }
