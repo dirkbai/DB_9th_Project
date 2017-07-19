@@ -1,10 +1,10 @@
-var alert = document.querySelector('.alert');
-var alertBtn = document.querySelector('.close_button');
+var alert = document.querySelectorAll('.alert .close_button');
 
-
-alertBtn.addEventListener('click', () => {
-   alert.style.display = 'none'
-});
+for (var i = 0; i < alert.length; i++) {
+  alert[i].addEventListener("click", function(e){
+     alert[$('.alert .close_button').index(this)].parentElement.style.display = 'none';
+  });
+}
 
 Chart.defaults.global.legend.display = false;
 
@@ -266,17 +266,12 @@ submitBtn.addEventListener("click", function(e){
    if (userName.length > 0 && userMessageVal.length > 0) {
      // Sent notice
      sentDialogHtml =
-       $(`<div id="confirmation" class="alert"> <p class="alert_text">Your message has been sent</p> <button type="button" name="close_button" class="close_button">
-         <span class="close"><b>x</b></span>
-       </button></div>`);
+
      // Clear Input and Textarea values
      messageForm.find("input[type=text], textarea").val("");
    } else {
      // Error notice
-     sentDialogHtml =
-       $(`<div id="confirmation" class="alert"> <p class="alert_text">Please complete each field before clicking send.</p> <button type="button" name="close_button" class="close_button">
-         <span class="close"><b>x</b></span>
-       </button></div>`);
+
    }
    // Insert confirmation before Sent button
    sentDialogHtml.insertBefore(sendBtn);
@@ -308,6 +303,51 @@ submitBtn.addEventListener("click", function(e){
 
 
 // ------------------------- Lokal Storrage
+
+let settingNotifications = $('#e-mail-notification-switch');
+let settingProfilePublic = $('#public-switch');
+let settingTimezone = $('#select_timezone');
+
+$('#save-btn').on('click', (e) => {
+  e.preventDefault();
+
+  // Variables to store setting values
+  let notificationsStatus = settingNotifications.prop('checked');
+  let profileStatus = settingProfilePublic.prop('checked');
+  let timezoneValue = settingTimezone.val();
+  //Set LocalStorage keys and values
+  localStorage.setItem('notifications', JSON.stringify(notificationsStatus));
+  localStorage.setItem('profile', JSON.stringify(profileStatus));
+  localStorage.setItem('timezone', JSON.stringify(timezoneValue));
+});
+
+// Click event to reset settings and remove localStorage
+$('#cancel-btn').on('click', () => {
+  localStorage.clear();
+});
+
+$(window).on("load", () => {
+  // Call function to check if localStorage exists
+  if (supportsLocalStorage) {
+    // If localStorage exists, retrieve settings values and set to variables below
+    let notificationsStatus = JSON.parse(localStorage.getItem('notifications'));
+    let profileStatus = JSON.parse(localStorage.getItem('profile'));
+    let timezoneValue = JSON.parse(localStorage.getItem('timezone'));
+    // Set toggle switches and select field to retrieved values
+    settingNotifications.prop('checked', notificationsStatus);
+    settingProfilePublic.prop('checked', profileStatus);
+    settingTimezone.val(timezoneValue);
+  }
+});
+
+let supportsLocalStorage = () => {
+  try {
+    return 'localStorage' in window && window.localStorage !== null;
+  } catch (e) {
+    return false;
+  }
+};
+
 
 // -------------- Versuch 1
 
