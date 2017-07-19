@@ -231,36 +231,63 @@ chartBtn[3].addEventListener('click', () => {
 // });
 
 var submitBtn = document.getElementById('submit_btn');
-var userMessage = document.getElementById('message_for_user');
+// var userMessage = document.getElementById('message_for_user');
 var userSearch = document.getElementById('search_user');
-var formSearch = document.querySelector('.message_user_form');
+// var formSearch = document.querySelector('.message_user_form');
 
-let userName = userSearch.value; //searchForUser global variable
-let userMessageVal = userMessage.value;
-
-  submitBtn.addEventListener('click', () => {
-    alert('test');
-
-  });
+// let userName = userSearch.value; //searchForUser global variable
+// let userMessageVal = userMessage.value;
 
 
-// $('#message_user_form').on('click', 'button', (e) => {
-//   e.preventDefault();
-//
-//
-//
-//   if (userName.length > 0 && userMessageVal.length > 0) {
-//     // Sent notice
-//       alert(`Your message to ${userName} has been sent`);
-//     // Clear Input and Textarea values
-//     messageForm.find("input[type=text], textarea").val("");
-//   } else {
-//     // Error notice
-//    alert('Please add a user name.');
-//   }
-//
-// });
+submitBtn.addEventListener("click", function(e){
+ e.preventDefault();
+ console.log("click")
 
+   // Remove an existing confirmation before generating a new one
+   const removeIfExists = $('#confirmation');
+   if (removeIfExists) {removeIfExists.remove();}
+
+   // Message User elements
+   const messageForm = $('#message_user_form');
+   const messageForUser = $('#message_for_user');
+   const messageSent = $('message-sent');
+   const messageError = $('message-error');
+   const sendBtn = $('#submit_btn');
+
+   // Get Input and Textarea values
+   let userName = userSearch.value; //searchForUser global variable
+   let userMessageVal = messageForUser.value;
+
+   // Confirmation
+   let sentDialogHtml = '';
+   let systemNotice = '';
+
+   // Create a sent or error confirmation based on conditions
+   if (userName.length > 0 && userMessageVal.length > 0) {
+     // Sent notice
+     sentDialogHtml =
+       $(`<div id="confirmation" class="alert"> <p class="alert_text">Your message has been sent</p> <button type="button" name="close_button" class="close_button">
+         <span class="close"><b>x</b></span>
+       </button></div>`);
+     // Clear Input and Textarea values
+     messageForm.find("input[type=text], textarea").val("");
+   } else {
+     // Error notice
+     sentDialogHtml =
+       $(`<div id="confirmation" class="alert"> <p class="alert_text">Please complete each field before clicking send.</p> <button type="button" name="close_button" class="close_button">
+         <span class="close"><b>x</b></span>
+       </button></div>`);
+   }
+   // Insert confirmation before Sent button
+   sentDialogHtml.insertBefore(sendBtn);
+  //  // Fade out confirmation than removing
+  //  systemNotice = $('#confirmation');
+  //  systemNotice.delay(3000).fadeOut('slow', () => {
+  //  systemNotice.remove();
+   //
+  //   });
+
+});
 
 // ------------------------- Settings checkbox
 

@@ -52,6 +52,7 @@ article{
   display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    align-content: flex-start;
 }
 
 /*-------------- Header ------------------*/
@@ -496,6 +497,21 @@ margin: 1rem 2.5%;
   border-radius: 6px;
 }
 
+.message_user_form .alert{
+  position: fixed;
+top: 50%;
+left: 50%;
+width: 40%;
+height: auto;
+margin-left: -20%;
+  z-index: 1000;
+}
+
+.message_user_form .alert .close_button{
+  width: 3rem;
+}
+
+
 .btn_submit_cancel{
   display: flex;
   justify-content: center;
@@ -804,7 +820,7 @@ button[name="close_button"] {
   justify-content: space-between;
   flex-wrap: nowrap;
   align-items: center;
-  margin: 0;
+  margin: 1.5rem;
 }
 
 /*-------message user------*/
