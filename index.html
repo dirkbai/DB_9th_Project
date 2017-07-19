@@ -52,7 +52,7 @@
           <div class="alert">
             <p class="alert_text">ALERT this Site is pretty awesome and was fun to create. Thanks for checking it out</p>
             <button type="button" name="close_button" class="close_button">
-              <p class="close"><b>x</b></p>
+              <span class="close"><b>x</b></span>
             </button>
           </div>
         </div>
@@ -194,7 +194,7 @@
         </div>
         <article class="message_user">
           <h3>Message User</h3>
-          <form class="message_user_form"  method="post">
+          <form class="message_user_form" id="message_user_form" method="post">
             <fieldset>
               <legend>search users</legend>
               <input type="text" list="all_users" name="search_user" placeholder="Search for User" id="search_user">
@@ -206,7 +206,7 @@
               </datalist>
               <textarea name="message_for_user" placeholder="Message for User" id="message_for_user"></textarea>
             </fieldset>
-            <button class="btn_submit_cancel" id="submit_btn" onclick="message(); return false;" type="submit">Send</button>
+            <button class="btn_submit_cancel" id="submit_btn" type="submit">Send</button>
           </form>
         </article>
         <div class="border_v">
@@ -217,20 +217,24 @@
             <fieldset>
               <legend>Settings</legend>
               <div class="e-mail_note_wrapper">
-                <label for="send_e-mail_notification">Send E-mail Notification</label>
-                <label class="switch">
-                  <input type="checkbox" id="send_e-mail_notification" checked>
-                  <div class="slider round"></div>
-                  <span class="onoffswitch-inner"></span>
-                </label>
+                <p>Send E-mail Notification</p>
+                <div class="onoffswitch">
+                  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="e-mail-notification-switch">
+                  <label class="onoffswitch-label" for="e-mail-notification-switch">
+                    <span class="onoffswitch-inner"></span>
+                    <span class="onoffswitch-switch"></span>
+                  </label>
+                </div>
               </div>
               <div class="profile_public_wrapper">
-                <label for="send_e-mail_notification">Set Profile to Public</label>
-                <label class="switch">
-                  <input type="checkbox" id="profile-public" checked>
-                  <div class="slider round"></div>
-                  <span class="onoffswitch-inner" id="mail_switch_inner"></span>
-                </label>
+                <p>Set Profile to Public</p>
+                <div class="onoffswitch">
+                  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="public-switch">
+                  <label class="onoffswitch-label" for="public-switch">
+                    <span class="onoffswitch-inner"></span>
+                    <span class="onoffswitch-switch"></span>
+                  </label>
+                </div>
               </div>
               <select id="select_timezone" name="select_timezone">
                 <optgroup label="">

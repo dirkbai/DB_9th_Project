@@ -52,6 +52,7 @@ article{
   display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    align-content: flex-start;
 }
 
 /*-------------- Header ------------------*/
@@ -496,6 +497,21 @@ margin: 1rem 2.5%;
   border-radius: 6px;
 }
 
+.message_user_form .alert{
+  position: fixed;
+top: 50%;
+left: 50%;
+width: 40%;
+height: auto;
+margin-left: -20%;
+  z-index: 1000;
+}
+
+.message_user_form .alert .close_button{
+  width: 3rem;
+}
+
+
 .btn_submit_cancel{
   display: flex;
   justify-content: center;
@@ -527,85 +543,79 @@ margin: 1rem 2.5%;
   margin-bottom: 1.8rem;
 }
 
-/* The switch - the box around the slider */
-.switch {
+.e-mail_note_wrapper p,
+.profile_public_wrapper p{
+  margin: 0;
+}
+
+.onoffswitch {
   position: relative;
-  display: inline-block;
-  width: 80px;
-  height: 34px;
+  width: 84px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
-
-/* Hide default HTML checkbox */
-.switch input {display:none;}
-
-/* The slider */
-.slider {
-  position: absolute;
+.onoffswitch-checkbox {
+  display: none;
+}
+.onoffswitch-label {
+  display: block;
+  overflow: hidden;
   cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #B42867;
-  border: solid 3px #2E7581;
-  -webkit-transition: .4s;
-  transition: .4s;
+  border: 2px solid #2A5F67;
+  border-radius: 50px;
 }
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 1px;
-  bottom: 1px;
-  background-color: #C0B76B;
-  z-index: 5;
-  -webkit-transition: .4s;
-  transition: .4s;
+.onoffswitch-inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
 }
-
-
-.onoffswitch-inner:before {
-    position: absolute;
-    top: 2px;
-    left: 8px;
-    content: "ON";
-    color: white;
-}
-
-.onoffswitch-inner-after:before {
-  position: absolute;
-  top: 2px;
-  left: 34px;
-  content: "OFF";
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 28px;
+  padding: 0;
+  line-height: 28px;
+  font-size: 1rem;
   color: white;
-  transition: .5s;
+  box-sizing: border-box;
 }
-
-
-
-.switch input:checked + .slider {
+.onoffswitch-inner:before {
+  content: "ON";
+  padding-top: 1px;
+  padding-left: 10px;
   background-color: #2E7581;
+  color: white;
 }
-
-.switch input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+.onoffswitch-inner:after {
+  content: "OFF";
+  padding-top: 1px;
+  padding-right: 10px;
+  background-color: #B42867;
+  color: white;
+  text-align: right;
 }
-
-.switch input:checked + .slider:before {
-  -webkit-transform: translateX(46px);
-  -ms-transform: translateX(46px);
-  transform: translateX(46px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
+.onoffswitch-switch {
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin: 4px;
+  background: #C0B76B;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 52px;
   border-radius: 50%;
+  transition: all 0.3s ease-in 0s;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+  right: 0px;
+  background-color: #C0B76B;
 }
 
 #select_timezone{
@@ -613,7 +623,6 @@ margin: 1rem 2.5%;
   height: 3rem;
   border: solid 2px #2A5F67;
   border-radius: 6px;
-  appearance: none;
   padding: 0 1rem;
   margin-bottom: 2rem;
   -moz-appearance: none;
@@ -811,7 +820,7 @@ button[name="close_button"] {
   justify-content: space-between;
   flex-wrap: nowrap;
   align-items: center;
-  margin: 0;
+  margin: 1.5rem;
 }
 
 /*-------message user------*/
@@ -852,7 +861,7 @@ button[name="close_button"] {
 
   #select_timezone{
   height: 4rem;
-  margin-bottom: 2.4rem;
+  margin-bottom: 2.7rem;
   }
 
 }
